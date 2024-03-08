@@ -1,0 +1,35 @@
+.Stoper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+.Stoper h1 {
+    display: flex;
+    height: 10vh;
+    font-family: 'Courier New';
+    font-size: 5em;
+    font-weight: 1000;
+    color: #1a3d7e;
+  } 
+.Stoper .buttonBox {
+  display: flex;
+  width: 50rem;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+.Stoper button {
+  margin: 0 1rem;
+    display: block;
+    width: 30%;
+    background-color: #1a3d7e;
+    color: antiquewhite;
+}
+.Stoper button:hover{
+    display: block;
+    background-color: #2b55a3;
+    color: antiquewhite;
+}
