@@ -20,12 +20,8 @@ const Stoper: React.FC = () => {
     };
   }, [isRunning]);
 
-  const startTimer = () => {
-    setIsRunning(true);
-  };
-
-  const stopTimer = () => {
-    setIsRunning(false);
+  const ChangeTimer = () => {
+    isRunning ? setIsRunning(false) : setIsRunning(true);
   };
 
   const resetTimer = () => {
@@ -47,8 +43,7 @@ const Stoper: React.FC = () => {
     <div className="Stoper">
       <h1>{formatTime(seconds)}</h1>
       <div className="buttonBox">
-        <button onClick={startTimer}>Start</button>
-        <button onClick={stopTimer}>Stop</button>
+        <button onClick={ChangeTimer}>{isRunning ? "stop" : "start"}</button>
         <button onClick={resetTimer}>Reset</button>
       </div>
     </div>

@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import "./timer.css";
 
 const Timer: React.FC = () => {
-  const [seconds, setSeconds] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
+  const [seconds, setSeconds] = useState<number>(0);
+  const [isRunning, setIsRunning] = useState<boolean>(false);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -13,19 +13,18 @@ const Timer: React.FC = () => {
         setSeconds((seconds) => seconds - 1);
       }, 1000);
     }
+
+    if (seconds === 0) setIsRunning(false);
+
     return () => {
       if (interval) {
         clearInterval(interval);
       }
     };
-  }, [isRunning]);
+  }, [isRunning, seconds]);
 
-  const startTimer = () => {
-    setIsRunning(true);
-  };
-
-  const stopTimer = () => {
-    setIsRunning(false);
+  const ChangeTimer = () => {
+    isRunning ? setIsRunning(false) : setIsRunning(true);
   };
 
   const resetTimer = () => {
@@ -72,29 +71,28 @@ const Timer: React.FC = () => {
       <div className="buttonBoxTimer">
         <button
           onClick={() => {
-            setSeconds(seconds - 3600);
+            setSeconds(seconds > 3600 ? seconds - 3600 : 0);
           }}
         >
           -
         </button>
         <button
           onClick={() => {
-            setSeconds(seconds - 60);
+            setSeconds(seconds > 60 ? seconds - 60 : 0);
           }}
         >
           -
         </button>
         <button
           onClick={() => {
-            setSeconds(seconds - 1);
+            setSeconds(seconds > 1 ? seconds - 1 : 0);
           }}
         >
           -
         </button>
       </div>
       <div className="buttonBox">
-        <button onClick={startTimer}>Start</button>
-        <button onClick={stopTimer}>Stop</button>
+        <button onClick={ChangeTimer}>{isRunning ? "stop" : "start"}</button>
         <button onClick={resetTimer}>Reset</button>
       </div>
     </div>

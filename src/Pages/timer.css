@@ -19,7 +19,7 @@
 }
 .Timer .buttonBox {
   display: flex;
-  width: 50rem;
+  width: 30rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@
 .Timer button {
   margin: 0 1rem;
   display: block;
-  width: 30%;
+  width: 50%;
   background-color: var(--color-accent);
   color: antiquewhite;
 }
