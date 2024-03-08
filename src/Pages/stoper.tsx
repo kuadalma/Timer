@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import './stoper.css'
+import "./stoper.css";
 
 const Stoper: React.FC = () => {
   const [seconds, setSeconds] = useState(0);
@@ -10,7 +10,7 @@ const Stoper: React.FC = () => {
     let interval: NodeJS.Timeout;
     if (isRunning) {
       interval = setInterval(() => {
-        setSeconds(seconds => seconds + 1);
+        setSeconds((seconds) => seconds + 1);
       }, 1000);
     }
     return () => {
@@ -34,19 +34,19 @@ const Stoper: React.FC = () => {
   };
 
   const formatTime = (seconds: number) => {
-    let totalMinutes = Math.floor(seconds / 60);
-    let totalHours = Math.floor(totalMinutes / 60);
-    let hours = String(totalHours).padStart(2, '0');
-    let minutes = String(totalMinutes % 60).padStart(2, '0');
-    let secs = String(seconds % 60).padStart(2, '0');
+    const totalMinutes = Math.floor(seconds / 60);
+    const totalHours = Math.floor(totalMinutes / 60);
+    const hours = String(totalHours).padStart(2, "0");
+    const minutes = String(totalMinutes % 60).padStart(2, "0");
+    const secs = String(seconds % 60).padStart(2, "0");
 
     return `${hours}:${minutes}:${secs}`;
   };
 
   return (
-    <div className='Stoper'>
+    <div className="Stoper">
       <h1>{formatTime(seconds)}</h1>
-      <div className='buttonBox'>
+      <div className="buttonBox">
         <button onClick={startTimer}>Start</button>
         <button onClick={stopTimer}>Stop</button>
         <button onClick={resetTimer}>Reset</button>
