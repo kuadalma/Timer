@@ -1,3 +1,5 @@
+@import "../assets/color.css";
+
 .clock {
   display: flex;
   flex-direction: row;
@@ -10,8 +12,8 @@
   display: flex;
   height: 10vh;
   width: 60rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 10em;
   font-weight: 500;
-  color: #1a3d7e;
-} 
+  color: var(--color-text-main);
+}

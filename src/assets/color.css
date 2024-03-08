@@ -1,0 +1,55 @@
+/* @import "../assets/color.css"; */
+
+/* Definicja zmiennych kolorów dla preferowanego schematu kolorów ciemnego */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Kolory tła */
+    --color-bg: #121212;
+    --color-bg-darker: #0d0d0d;
+
+    /* Kolory tekstu */
+    --color-text-main: #e8e8e8;
+    --color-text-secondary: #a8a8a8;
+
+    /* Kolory akcentów */
+    --color-accent: #bb86fc;
+    --color-accent-hover: #3700b3;
+
+    /* Kolory informacyjne */
+    --color-info: #03dac6;
+    --color-success: #4caf50;
+    --color-warning: #fb8c00;
+    --color-error: #cf6679;
+
+    /* Kolory granic i podziałów */
+    --color-border: #292929;
+    --color-divider: #383838;
+  }
+}
+
+/* Definicja zmiennych kolorów dla preferowanego schematu kolorów jasnego */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Kolory tła */
+    --color-bg: #ffffff;
+    --color-bg-darker: #f0f0f0;
+
+    /* Kolory tekstu */
+    --color-text-main: #212121;
+    --color-text-secondary: #757575;
+
+    /* Kolory akcentów */
+    --color-accent: #1e88e5;
+    --color-accent-hover: #1565c0;
+
+    /* Kolory informacyjne */
+    --color-info: #29b6f6;
+    --color-success: #66bb6a;
+    --color-warning: #ffa726;
+    --color-error: #ef5350;
+
+    /* Kolory granic i podziałów */
+    --color-border: #e0e0e0;
+    --color-divider: #bdbdbd;
+  }
+}

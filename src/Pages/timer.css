@@ -1,44 +1,46 @@
+@import "../assets/color.css";
+
 .Timer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
 .Timer h1 {
-    display: flex;
-    margin: 0;
-    height: 10vh;
-    font-family: 'Courier New';
-    font-size: 5em;
-    font-weight: 1000;
-    color: #1a3d7e;
-  } 
+  display: flex;
+  margin: 0;
+  height: 10vh;
+  font-family: "Courier New";
+  font-size: 5em;
+  font-weight: 1000;
+  color: var(--color-text-main);
+}
 .Timer .buttonBox {
   display: flex;
   width: 50rem;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 .Timer .buttonBoxTimer {
-    margin: 2rem 0;
-    display: flex;
-    width: 25rem;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center;
+  margin: 2rem 0;
+  display: flex;
+  width: 25rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .Timer button {
   margin: 0 1rem;
-    display: block;
-    width: 30%;
-    background-color: #1a3d7e;
-    color: antiquewhite;
+  display: block;
+  width: 30%;
+  background-color: var(--color-accent);
+  color: antiquewhite;
 }
-.Timer button:hover{
-    display: block;
-    background-color: #2b55a3;
-    color: antiquewhite;
+.Timer button:hover {
+  display: block;
+  background-color: var(--color-accent-hover);
+  color: antiquewhite;
 }
